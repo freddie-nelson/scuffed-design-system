@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <button></button>
+  <button>Yo Bro</button>
 </template>
 
 <style lang="scss" scoped></style>
