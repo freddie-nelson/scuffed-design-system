@@ -4,9 +4,6 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "SButton",
   components: {},
-  setup() {
-    console.log("Hello from SButton");
-  },
 });
 </script>
 
