@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent, ref } from "vue";
 
 import { Icon } from "@iconify/vue";
 import showIcon from "@iconify-icons/feather/eye";
@@ -11,17 +11,24 @@ export default defineComponent({
   name: "SInputPassword",
   inheritAttrs: false,
   components: { Icon, SInputText },
-  // props: {
-  //   modelValue: {
-  //     type: String,
-  //     required: true,
-  //   },
-  // },
-  setup() {
+  setup(props, { attrs }) {
     const type = ref("password");
+
+    const rootAttrs = computed(() => {
+      const a = { class: attrs.class };
+      return a;
+    });
+
+    const inputAttrs = computed(() => {
+      const a = { ...attrs, class: "" };
+      return a;
+    });
 
     return {
       type,
+
+      rootAttrs,
+      inputAttrs,
 
       icons: {
         show: showIcon,
@@ -33,8 +40,8 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="relative flex items-center w-max">
-    <s-input-text v-bind="$attrs" :type="type" />
+  <div class="relative flex items-center" v-bind="rootAttrs">
+    <s-input-text class="w-full" v-bind="inputAttrs" :type="type" />
 
     <Icon
       class="absolute right-0.5 p-3 w-11 h-11 rounded-lg cursor-pointer bg-neutral-50 text-neutral-500 hover:text-neutral-700 transition-colors duration-300"

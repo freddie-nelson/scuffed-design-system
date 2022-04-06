@@ -12,7 +12,7 @@ const Template = (args) => ({
     return { value: ref(""), args };
   },
   template: `
-    <s-input-password v-model="value" v-bind="args" />
+    <s-input-password class="w-max" v-model="value" v-bind="args" />
 
     <p class="mt-3">{{ value }}</p>
   `,
