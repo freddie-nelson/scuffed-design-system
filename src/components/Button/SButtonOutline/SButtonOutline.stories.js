@@ -1,7 +1,7 @@
 import SButtonOutline from "./SButtonOutline.vue";
 
 export default {
-  title: "Components/ButtonOutline",
+  title: "Components/Button/Outline",
   component: SButtonOutline,
 };
 

@@ -1285,6 +1285,18 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify-icons/feather@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/feather/-/feather-1.2.1.tgz#7bf188477f3bd2c85365910895c9a2d7958fd3da"
+  integrity sha512-FB4FODiuhtmgpQaCfAGxTL7d5DIcqR8c3eexf3TJjjSn0O8sZbMfzBeT9bRS6K6Yy1SczViSWnbNI2Tp/lkH2w==
+  dependencies:
+    "@iconify/types" "^1.0.12"
+
+"@iconify/types@^1.0.12":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-1.1.0.tgz#dc15fc988b1b3fd558dd140a24ede7e0aac11280"
+  integrity sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==
+
 "@iconify/vue@^3.2.1":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@iconify/vue/-/vue-3.2.1.tgz#bd8a2f1213ba8775d4b7a7a8ba895e53ae2f4dfc"

@@ -25,7 +25,7 @@ export default defineComponent({
 
 <template>
   <button
-    class="inline-flex font-semibold text-base underline transition-colors duration-200 ease focus:outline-none"
+    class="inline-flex font-semibold text-base transition-colors duration-200 ease focus:outline-none"
     :class="
       {
         primary:

@@ -1,7 +1,7 @@
 import SButtonText from "./SButtonText.vue";
 
 export default {
-  title: "Components/ButtonText",
+  title: "Components/Button/Text",
   component: SButtonText,
 };
 

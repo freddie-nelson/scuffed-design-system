@@ -1,7 +1,7 @@
 import SButton from "./SButton.vue";
 
 export default {
-  title: "Components/Button",
+  title: "Components/Button/Button",
   component: SButton,
 };
 
