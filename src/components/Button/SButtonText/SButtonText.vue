@@ -8,7 +8,6 @@ export default defineComponent({
     purpose: {
       type: String,
       default: "primary",
-      required: true,
       validator(value: string) {
         return (
           value === "primary" ||
