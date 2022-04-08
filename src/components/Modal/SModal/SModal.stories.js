@@ -14,7 +14,7 @@ const Template = (args) => ({
     return { open: ref(false), args };
   },
   template: `
-    <s-modal :open="open" @close="open = false">
+    <s-modal :open="open" @close="open = false" v-bind="args">
       <h1 class="text-2xl font-medium">Hello, this is a modal!</h1>
     </s-modal>
 

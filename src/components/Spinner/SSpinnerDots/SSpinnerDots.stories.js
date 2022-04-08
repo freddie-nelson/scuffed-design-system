@@ -11,7 +11,7 @@ const Template = (args) => ({
     return { args };
   },
   template: `
-    <s-spinner-dots />
+    <s-spinner-dots v-bind="args" />
   `,
 });
 

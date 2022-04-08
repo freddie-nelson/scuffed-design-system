@@ -13,7 +13,7 @@ const Template = (args) => ({
     return { tailwindConfig, args };
   },
   template: `
-    <s-spinner-ring :tailwindConfig="tailwindConfig" />
+    <s-spinner-ring :tailwindConfig="tailwindConfig" v-bind="args" />
   `,
 });
 

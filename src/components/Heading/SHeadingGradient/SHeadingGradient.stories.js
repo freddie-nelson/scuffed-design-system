@@ -11,7 +11,7 @@ const Template = (args) => ({
     return { args };
   },
   template: `
-    <s-heading-gradient class="text-5xl" :level="1">Gradient Heading</s-heading-gradient>
+    <s-heading-gradient class="text-5xl" :level="1" v-bind="args">Gradient Heading</s-heading-gradient>
   `,
 });
 

@@ -11,7 +11,7 @@ const Template = (args) => ({
     return { args };
   },
   template: `
-    <s-heading-sub class="text-4xl" :level="1">Sub Heading</s-heading-sub>
+    <s-heading-sub class="text-4xl" :level="1" v-bind="args">Sub Heading</s-heading-sub>
   `,
 });
 
