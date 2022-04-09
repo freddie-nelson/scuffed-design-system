@@ -36,7 +36,7 @@ export default defineComponent({
     const canvas = ref(document.createElement("canvas"));
     let ctx: CanvasRenderingContext2D | null = null;
 
-    const drawCircle = (e?: MouseEvent) => {
+    const drawCircle = () => {
       if (!ctx) return;
 
       ctx.beginPath();
@@ -54,8 +54,8 @@ export default defineComponent({
       lastX: 0,
       lastY: 0,
       onMouseDown: () => drawCircle(),
-      onMouseMove: (e?: MouseEvent) => {
-        if (mouse.pressed) drawCircle(e);
+      onMouseMove: () => {
+        if (mouse.pressed) drawCircle();
       },
     });
 

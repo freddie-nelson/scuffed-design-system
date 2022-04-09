@@ -20,7 +20,7 @@ export default defineComponent({
     const canvas = ref(document.createElement("canvas"));
     let ctx: CanvasRenderingContext2D | null = null;
 
-    const drawPath = (e?: MouseEvent) => {
+    const drawPath = () => {
       if (!ctx) return;
 
       ctx.beginPath();
@@ -47,7 +47,7 @@ export default defineComponent({
       lastX: 0,
       lastY: 0,
       onMouseDown: drawPath,
-      onMouseMove: (e?: MouseEvent) => {
+      onMouseMove: () => {
         if (mouse.pressed) drawPath();
       },
     });

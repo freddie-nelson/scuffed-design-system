@@ -35,12 +35,6 @@ export default defineComponent({
   }
 }
 
-// @keyframes spin {
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
-
 .dot {
   animation: bounce 1s infinite ease-in-out;
   animation-fill-mode: backwards;

@@ -4,7 +4,7 @@ export default function (
   element: Ref<HTMLElement>,
   event: keyof HTMLElementEventMap,
   callback: (e: Event) => void,
-  opts: any = {}
+  opts: object = {}
 ) {
   onMounted(() => {
     element.value.addEventListener(event, callback, opts);
