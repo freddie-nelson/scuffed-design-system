@@ -7,6 +7,7 @@ import closeIcon from "@iconify-icons/feather/x";
 
 export default defineComponent({
   name: "SModal",
+  inheritAttrs: false,
   components: { Icon },
   props: {
     teleport: {
@@ -63,7 +64,7 @@ export default defineComponent({
         aria-modal="true"
         role="dialog"
       >
-        <div class="p-14 bg-neutral-50 rounded-lg relative">
+        <div class="p-14 bg-neutral-50 rounded-lg relative" v-bind="$attrs">
           <button
             v-if="closeable"
             class="absolute right-4 top-4 w-6 h-6 text-neutral-900 hover:text-primary-400 focus:text-primary-500 transition-colors duration-300 outline-none"
