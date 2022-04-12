@@ -26,6 +26,7 @@ export default defineComponent({
     <div class="w-24 h-24 relative [animation-duration:10s] animate-spin">
       <s-input-range
         v-model="value"
+        tabindex="-1"
         :tailwindConfig="tailwindConfig"
         orientation="circular"
         :height="14"
