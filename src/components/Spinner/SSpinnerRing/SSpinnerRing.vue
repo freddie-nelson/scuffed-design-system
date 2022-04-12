@@ -36,6 +36,7 @@ export default defineComponent({
 
       <s-input-range
         v-model="value"
+        tabindex="-1"
         :max="value"
         :tailwindConfig="tailwindConfig"
         orientation="circular"
