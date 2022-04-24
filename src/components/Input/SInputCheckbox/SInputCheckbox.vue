@@ -60,6 +60,7 @@ export default defineComponent({
       v-bind="buttonAttrs"
       :class="checked ? 'bg-primary-400' : 'bg-neutral-300'"
       class="w-9 h-9 p-1.5 rounded-md text-neutral-50 focus:outline-2 focus:outline-neutral-600 transition-colors duration-300"
+      type="button"
       @click="
         checked = !checked;
         $emit('update:modelValue', checked);

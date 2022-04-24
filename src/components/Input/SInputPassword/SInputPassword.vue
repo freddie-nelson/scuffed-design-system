@@ -45,6 +45,7 @@ export default defineComponent({
 
     <button
       class="absolute right-0.5 p-3 w-11 h-11 rounded-lg outline-none bg-neutral-50 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 transition-colors duration-300"
+      type="button"
       @click="type === 'password' ? (type = 'text') : (type = 'password')"
     >
       <Icon :icon="type === 'password' ? icons.hide : icons.show" />

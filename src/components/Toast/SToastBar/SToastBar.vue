@@ -63,6 +63,7 @@ export default defineComponent({
     <button
       v-if="closeable"
       class="absolute right-4 w-6 h-6 hover:text-primary-400 focus:text-primary-500 transition-colors duration-300 outline-none"
+      type="button"
       @click="$emit('close')"
     >
       <Icon class="w-full h-full" :icon="icons.close" />
