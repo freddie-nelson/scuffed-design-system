@@ -35,7 +35,7 @@ import SSpinnerRing from "./components/Spinner/SSpinnerRing/SSpinnerRing.vue";
 import SToastBar from "./components/Toast/SToastBar/SToastBar.vue";
 import SToastController from "./components/Toast/SToastController/SToastController.vue";
 import Toast from "./components/Toast/SToastController/Toast";
-import ToastController from "./components/Toast/SToastController/Toast";
+import ToastController from "./components/Toast/SToastController/ToastController";
 
 export {
   SButton,
