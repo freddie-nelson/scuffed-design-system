@@ -1,5 +1,5 @@
 <script lang="ts">
-import { TailwindConfig } from "tailwindcss/tailwind-config";
+import { Config } from "tailwindcss";
 import { defineComponent, ref } from "vue";
 
 import SInputRange from "../../Input/SInputRange/SInputRange.vue";
@@ -9,7 +9,7 @@ export default defineComponent({
   components: { SInputRange },
   props: {
     tailwindConfig: {
-      type: Object as () => TailwindConfig,
+      type: Object as () => Config,
       required: true,
     },
   },
