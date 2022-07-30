@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { Config } from "tailwindcss";
-import { useExtractTailwindColors } from "@/utils/useExtractTailwindColors";
+import { useExtractTailwindColors } from "../../../utils/useExtractTailwindColors";
 
 import Vue3Slider from "vue3-slider";
 
