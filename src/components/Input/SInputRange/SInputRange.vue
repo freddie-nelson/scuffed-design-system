@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import resolveConfig from "tailwindcss/resolveConfig";
 import { Config } from "tailwindcss";
+import { useExtractTailwindColors } from "@/utils/useExtractTailwindColors";
 
 import Vue3Slider from "vue3-slider";
 
@@ -15,10 +15,10 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const config = resolveConfig(props.tailwindConfig);
+    const colors = useExtractTailwindColors(props.tailwindConfig);
 
     return {
-      colors: config.theme?.colors,
+      colors,
     };
   },
 });
