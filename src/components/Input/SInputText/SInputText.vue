@@ -6,7 +6,7 @@ export default defineComponent({
   components: {},
   props: {
     modelValue: {
-      type: String,
+      type: [String, Number],
       required: true,
     },
   },
