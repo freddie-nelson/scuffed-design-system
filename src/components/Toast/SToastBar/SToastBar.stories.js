@@ -23,3 +23,11 @@ Timer.args = { duration: 5000 };
 
 export const Closeable = Template.bind({});
 Closeable.args = { closeable: true };
+
+export const Action = Template.bind({});
+Action.args = {
+  action: {
+    text: "Action",
+    callback: () => alert("Action clicked!"),
+  },
+};

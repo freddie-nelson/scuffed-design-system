@@ -3,6 +3,7 @@ import { defineComponent, ref } from "vue";
 
 import { Icon } from "@iconify/vue";
 import closeIcon from "@iconify-icons/feather/x";
+import Toast from "../SToastController/Toast";
 
 export default defineComponent({
   name: "SToastBar",
@@ -15,6 +16,9 @@ export default defineComponent({
     duration: {
       type: Number,
       default: 0,
+    },
+    action: {
+      type: Object as () => Toast["action"],
     },
   },
   emits: ["close"],
@@ -60,14 +64,24 @@ export default defineComponent({
       <slot></slot>
     </p>
 
-    <button
-      v-if="closeable"
-      class="absolute right-4 w-6 h-6 hover:text-primary-400 focus:text-primary-500 transition-colors duration-300 outline-none"
-      type="button"
-      @click="$emit('close')"
-    >
-      <Icon class="w-full h-full" :icon="icons.close" />
-    </button>
+    <div class="absolute right-2 flex gap-3 items-center">
+      <button
+        v-if="action"
+        class="px-4 bg-secondary-400 bg-opacity-30 rounded-md h-[2.1rem] text-secondary-500 font-semibold hover:bg-primary-400 hover:bg-opacity-30 hover:text-primary-500 focus:bg-primary-400 focus:bg-opacity-30 focus:text-primary-500 transition-colors duration-300"
+        @click="action.callback"
+      >
+        {{ action.text }}
+      </button>
+
+      <button
+        v-if="closeable"
+        class="mr-2 w-6 h-6 hover:text-primary-400 focus:text-primary-500 transition-colors duration-300 outline-none"
+        type="button"
+        @click="$emit('close')"
+      >
+        <Icon class="w-full h-full" :icon="icons.close" />
+      </button>
+    </div>
 
     <!-- timer -->
     <div

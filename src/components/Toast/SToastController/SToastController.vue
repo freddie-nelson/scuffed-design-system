@@ -23,9 +23,10 @@ export default defineComponent({
     <transition-group name="fade" tag="div" class="w-full relative">
       <s-toast-bar
         v-for="toast in toasts"
-        :key="toast"
+        :key="toast.id"
         :closeable="toast.closeable"
         :duration="toast.duration"
+        :action="toast.action"
         @close="removeToast(toast)"
         class="w-full mb-2 origin-top"
       >
