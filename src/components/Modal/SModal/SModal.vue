@@ -10,6 +10,10 @@ export default defineComponent({
   inheritAttrs: false,
   components: { Icon },
   props: {
+    noTeleport: {
+      type: Boolean,
+      default: false,
+    },
     teleport: {
       type: String,
       default: "body",
@@ -56,7 +60,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <teleport :to="teleport">
+  <teleport :disable="noTeleport" :to="teleport">
     <transition name="fade">
       <div
         v-if="open"
