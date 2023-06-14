@@ -26,6 +26,10 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
+    noFixed: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ["close"],
   setup(props, { emit }) {
@@ -64,7 +68,8 @@ export default defineComponent({
     <transition name="fade">
       <div
         v-if="open"
-        class="fixed top-0 left-0 w-full h-full bg-neutral-900 bg-opacity-20 flex justify-center items-center z-40"
+        class="w-full h-full bg-neutral-900 bg-opacity-20 flex justify-center items-center z-40"
+        :class="{ 'fixed top-0 left-0': !noFixed }"
         aria-modal="true"
         role="dialog"
       >
