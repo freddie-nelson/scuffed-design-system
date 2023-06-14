@@ -60,7 +60,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <teleport :disable="noTeleport" :to="teleport">
+  <teleport :disabled="noTeleport" :to="teleport">
     <transition name="fade">
       <div
         v-if="open"
